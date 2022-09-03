@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+.container .ring{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top: 3px solid white;
+}
+.balls{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 18px;
+
+}
+
+
+.container .ring:nth-child(3){
+    position: absolute;
+    top: 50%;
+    border: 3px solid transparent;
+    border-bottom: 3px solid white;
+
+}
+
+p{
+    color: white;
+    position: absolute;
+    bottom: 100px;
+}

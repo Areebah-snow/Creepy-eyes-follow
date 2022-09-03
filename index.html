@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/face.css">
+    <title>ISpy</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ring">
+            <div class="balls"></div>
+        </div>
+        <div class="ring">
+            <div class="balls"></div>
+        </div>
+        <div class="ring"></div>
+    </div>
+   
+
+   <p>The goal is to make the eyes move and follow the 
+    mouse when is hovering around the screen
+   </p>
+   <script>
+    var balls=document.getElementsByClassName("balls");
+    document.onmousemove = function(){
+        var x = event.clientX * 100/ window.innerWidth + "%";
+        var y = event.clientY * 50/ window.innerHeight + "%";
+       //for vetical and y for horizontal
+    for(let i=0; i<2;i++){
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].style.transform = "translate(-"+x+", -"+y+")";
+    }
+    }
+   </script>
+</body>
+</html>  
